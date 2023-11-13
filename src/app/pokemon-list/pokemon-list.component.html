@@ -1,8 +1,12 @@
+<div >
+<button class="buttons" (click)="previous()">previous</button>
+<button class="buttons" (click)="next()">next</button>
+</div>
 <div class="pokemon-grid">
     
     <div class="box" *ngFor="let pokemon of pokemons">
         <img [src]="pokemon.sprites.front_default" alt="Pokemon">
-        <h3>{{ pokemon.name }}</h3>
+        <h3>{{ pokemon.id }} {{ pokemon.name }}</h3>
         <p>
             <b>Type: </b> {{ pokemon.types[0].type.name }}
         </p>
